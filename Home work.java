@@ -41,4 +41,54 @@
        double [] arr = { -5, 56, 78,9,3,77,9,0};
        printInRange(arr,-4, 89);          
           
-          
+       
+    private static void printBiggest() {
+        System.out.println("I am the biggest of them all! ");
+    }
+
+    private static void printBiggest(int a) {
+        System.out.println(String.format("a is biggest : %d", a));
+    }
+
+    private static void printBiggest(int a, int b) {
+        if (a > b) {
+            System.out.println(String.format("a is biggest : %d", a));
+        } else
+            System.out.println(String.format("B is biggest : %d", b));
+    }
+
+    private static void printBiggest(int a, int b, int c) {
+        if (a == b || a == c || b == c){
+            System.out.print("some of them are equal ,but ..");}
+        if (a > b && a > c) {
+            System.out.println(String.format("a is biggest : %d", a));
+        } else if (b > a && b > c)
+            System.out.println(String.format("b is biggest : %d", b));
+        else
+            System.out.println(String.format("c is biggest : %d", c));
+
+    }
+
+    private static void inputFromUser ( Scanner s){
+        System.out.print( "enter the float number : ");
+       float x = s.nextFloat();
+    }
+
+    private static void createRandom(Random r, int min, int max) {
+        int a = r.nextInt();
+        if (a > min && a < max) {
+            System.out.println(String.format(" random number is :%d ", a));
+        } else
+            System.out.println("number out of range");
+    }
+
+   private static void printInRange(double[] arr, double min, double max) {
+       double[] arr1 = new double[arr.length];
+       for (int i = 0; i < arr.length; i++) {
+           if (arr[i] > min && arr[i] < max) {
+               arr1[i] = arr[i];
+           }
+           if (arr1[i] !=0 )
+           System.out.print(arr1[i]+ " ");
+       }
+   }   
